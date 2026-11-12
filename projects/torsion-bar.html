@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Torsion Bar Suspension · Thomas Bonar</title>
+<meta name="description" content="A hollow steel torsion bar, splines, bearing lug, axle, and lever arm, each sized and checked for static and fatigue loads.">
+<meta name="author" content="Thomas Bonar">
+<meta property="og:title" content="Torsion Bar Suspension · Thomas Bonar">
+<meta property="og:description" content="A hollow steel torsion bar, splines, bearing lug, axle, and lever arm, each sized and checked for static and fatigue loads.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thomasbonar.github.io/projects/torsion-bar.html">
+<meta property="og:image" content="https://thomasbonar.github.io/assets/img/og-card.png">
+<meta name="theme-color" content="#04070c">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="mark">TB</span><span>Thomas Bonar</span></a>
+    <button class="menu-btn" type="button" aria-label="Open menu">MENU</button>
+    <ul>
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#cad">CAD Studio</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="p-hero">
+  <div class="wrap">
+    <div class="crumb rv"><a href="../index.html#work">Work</a> / ME 314 · Individual</div>
+    <h1 class="rv">Torsion Bar Suspension</h1>
+    <p class="lede rv">Every part in this suspension was mine to size: the torsion bar, its splines, the bearing lug, the coupling bolts, the axle, and the lever arm. The goal was a design that passes every check without being overbuilt.</p>
+    <dl class="meta frame rv"><div><dt>Course</dt><dd>ME 314, Machine Design</dd></div><div><dt>Team</dt><dd>Individual</dd></div><div><dt>Timeline</dt><dd>Fall 2025</dd></div><div><dt>Tools</dt><dd>MATLAB, hand calcs</dd></div></dl>
+    <div class="p-cover frame rv contain"><img src="../assets/img/tb-schematic.webp" alt="Torsion Bar Suspension" width="1474" height="786" fetchpriority="high"></div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="p-body">
+    <aside class="toc"><a href="#problem">01 · The requirements</a><a href="#design">02 · How I approached it</a><a href="#gallery">03 · Gallery</a><a href="#docs">04 · Read the work</a></aside>
+    <article class="prose"><div class="block rv"><h2 id="problem"><span class="n">01</span>The requirements</h2>
+<p>A steel torsion bar carries a wheel and tire through a lever arm that swings between 47° and 53° under load. The bar had to be hollow to save weight (3 in maximum outer diameter), designed for 99.9% reliability, and meet set factors of safety: 1.15 in static torsion, 1.05 on the splines, and 1.10 in fatigue at the bearing support.</p></div><div class="block rv"><h2 id="design"><span class="n">02</span>How I approached it</h2>
+<ul>
+<li><strong>Torsion bar:</strong> sized the outer diameter at 1.625 in, then checked torque and shear across the full range of lever-arm motion.</li>
+<li><strong>Splines:</strong> picked ANSI B92.1 8/16-pitch involute splines and checked shear, compression, and shaft stresses.</li>
+<li><strong>Bearing support lug:</strong> designed the cast aluminum lug and its bolts, with a 0.50 casting factor on bearing strength.</li>
+<li><strong>Fatigue:</strong> ran a DE-Gerber analysis at the bearing shoulder and built S-N curves to confirm life.</li>
+<li><strong>Axle and lever arm:</strong> built shear and moment diagrams for the distributed tire load and sized each part from them.</li>
+<li><strong>Cost:</strong> used the lowest-strength bolt grade that still passed, as the brief required.</li>
+</ul>
+<div class="kpis">
+ <div class="kpi frame"><div class="v">5,962<small> in·lbf</small></div><div class="k">Maximum applied torque</div></div>
+ <div class="kpi frame"><div class="v">7,413<small> psi</small></div><div class="k">Maximum shear stress</div></div>
+ <div class="kpi frame"><div class="v">15.5</div><div class="k">Static factor of safety (required 1.15)</div></div>
+</div></div><div class="block rv"><h2 id="gallery"><span class="n">03</span>Gallery</h2><div class="gallery"><figure class="frame w6 fit" style="--ar:1444/414"><img src="../assets/img/tb-shaft-drawing.webp" alt="Torsion bar detail." width="1444" height="414" loading="lazy" decoding="async"><figcaption>Torsion bar detail.</figcaption></figure><figure class="frame " style="--ar:4/3"><img src="../assets/img/tb-lug-drawing.webp" alt="Bearing support lug." width="1568" height="976" loading="lazy" decoding="async"><figcaption>Bearing support lug.</figcaption></figure><figure class="frame " style="--ar:4/3"><img src="../assets/img/tb-lever-arm.webp" alt="Lever arm with internal involute spline." width="1278" height="778" loading="lazy" decoding="async"><figcaption>Lever arm with internal involute spline.</figcaption></figure><figure class="frame fit" style="--ar:1276/500"><img src="../assets/img/tb-shear.webp" alt="Axle shear force diagram." width="1276" height="500" loading="lazy" decoding="async"><figcaption>Axle shear force diagram.</figcaption></figure><figure class="frame fit" style="--ar:1260/512"><img src="../assets/img/tb-moment.webp" alt="Axle bending moment diagram." width="1260" height="512" loading="lazy" decoding="async"><figcaption>Axle bending moment diagram.</figcaption></figure></div><p class="note">Click any image to enlarge. Technical drawings are shown in an inverted blueprint style.</p></div><div class="block rv"><h2 id="docs"><span class="n">04</span>Read the work</h2><div class="docs"><a class="doc frame" href="../assets/docs/torsion-bar-report.pdf" target="_blank" rel="noopener"><span class="ico">PDF</span><span><span>Torsion Bar Design Report</span><br><span class="s">25 pages · full calculations · opens in your browser</span></span></a></div></div></article>
+  </div>
+  <div class="next">
+    <a href="gearbox.html">← Aircraft Accessory Gearbox</a>
+    <a href="sonic-car.html">Autonomous Sonic Car →</a>
+  </div>
+</main>
+<footer>
+  <div class="wrap">© 2026 Thomas Bonar · Mechanical Engineering · Built by hand, hosted on GitHub Pages</div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Autonomous Sonic Car · Thomas Bonar</title>
+<meta name="description" content="An Arduino car that holds its distance from a wall, escapes a box, and runs a maze, plus everything we learned when the sensor didn&#x27;t cooperate.">
+<meta name="author" content="Thomas Bonar">
+<meta property="og:title" content="Autonomous Sonic Car · Thomas Bonar">
+<meta property="og:description" content="An Arduino car that holds its distance from a wall, escapes a box, and runs a maze, plus everything we learned when the sensor didn&#x27;t cooperate.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thomasbonar.github.io/projects/sonic-car.html">
+<meta property="og:image" content="https://thomasbonar.github.io/assets/img/og-card.png">
+<meta name="theme-color" content="#04070c">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="mark">TB</span><span>Thomas Bonar</span></a>
+    <button class="menu-btn" type="button" aria-label="Open menu">MENU</button>
+    <ul>
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#cad">CAD Studio</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="p-hero">
+  <div class="wrap">
+    <div class="crumb rv"><a href="../index.html#work">Work</a> / ME 330 · Mechatronics</div>
+    <h1 class="rv">Autonomous Sonic Car</h1>
+    <p class="lede rv">Build a small car that senses its surroundings and drives itself. It sounds simple, until cheap motors and a noisy sensor meet a real floor. I handled the mechanical side and wrote up our results.</p>
+    <dl class="meta frame rv"><div><dt>Course</dt><dd>ME 330, Mechatronics</dd></div><div><dt>Team</dt><dd>4 engineers</dd></div><div><dt>My sections</dt><dd>Mechanical, Results</dd></div><div><dt>Hardware</dt><dd>Arduino Uno, HC-SR04</dd></div></dl>
+    <div class="p-cover frame rv"><video src="../assets/video/sonic-car.mp4" poster="../assets/img/sonic-car-poster.webp" autoplay muted loop playsinline preload="metadata" aria-label="The sonic car running its course"></video></div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="p-body">
+    <aside class="toc"><a href="#goals">01 · The objectives</a><a href="#mechanical">02 · Mechanical fixes</a><a href="#results">03 · What happened</a><a href="#gallery">04 · Gallery</a></aside>
+    <article class="prose"><div class="block rv"><h2 id="goals"><span class="n">01</span>The objectives</h2>
+<ul>
+<li>Read accurate distances from the ultrasonic sensor.</li>
+<li>Hold a set distance of 8 ± 2 in from an object using closed-loop control.</li>
+<li>Start facing backward and escape an enclosed box on its own.</li>
+<li>Run a predetermined maze, reliably and repeatably.</li>
+</ul></div><div class="block rv"><h2 id="mechanical"><span class="n">02</span>Mechanical fixes</h2>
+<p>The car had two drive wheels on independent DC motors and a swivel caster in the back. The caster dragged unevenly and kept ruining turns, so after taping it failed, we removed it entirely, and the car tracked more consistently. The left motor was also weaker than the right and pulled the car left, so we compensated with extra power to that side in code. And because every test run drained the 9 V battery and slowed the wheels, we swapped in fresh batteries to keep trials comparable.</p></div><div class="block rv"><h2 id="results"><span class="n">03</span>What happened</h2>
+<p>The ultrasonic sensor couldn't read reliably past about 25 inches on the floor. For the box escape, we used the sensor once at close range and finished with open-loop moves. For the maze, open-loop timing kept drifting as the battery faded, so we added an infrared remote and steered through, and it worked every time. The lesson I took away was to test the sensor in the real conditions early, before designing around it.</p></div><div class="block rv"><h2 id="gallery"><span class="n">04</span>Gallery</h2><div class="gallery"><figure class="frame " style="--ar:4/3"><img src="../assets/img/car-side.webp" alt="Side view of the wiring and drive." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Side view of the wiring and drive.</figcaption></figure><figure class="frame w6 fit" style="--ar:1254/850"><img src="../assets/img/car-flowchart.webp" alt="Control logic for the remote-control run." width="1254" height="850" loading="lazy" decoding="async"><figcaption>Control logic for the remote-control run.</figcaption></figure></div><p class="note">Click any image to enlarge. Technical drawings are shown in an inverted blueprint style.</p></div></article>
+  </div>
+  <div class="next">
+    <a href="torsion-bar.html">← Torsion Bar Suspension</a>
+    <a href="manufacturing-labs.html">Hands-On Manufacturing →</a>
+  </div>
+</main>
+<footer>
+  <div class="wrap">© 2026 Thomas Bonar · Mechanical Engineering · Built by hand, hosted on GitHub Pages</div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

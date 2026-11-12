@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lock Point: Modular CNC Workholding · Thomas Bonar</title>
+<meta name="description" content="A swappable vacuum-and-pallet fixture system that lets SDSU&#x27;s Haas mills hold large, thin, and irregular parts that a standard vise can&#x27;t.">
+<meta name="author" content="Thomas Bonar">
+<meta property="og:title" content="Lock Point: Modular CNC Workholding · Thomas Bonar">
+<meta property="og:description" content="A swappable vacuum-and-pallet fixture system that lets SDSU&#x27;s Haas mills hold large, thin, and irregular parts that a standard vise can&#x27;t.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thomasbonar.github.io/projects/lock-point.html">
+<meta property="og:image" content="https://thomasbonar.github.io/assets/img/og-card.png">
+<meta name="theme-color" content="#04070c">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="mark">TB</span><span>Thomas Bonar</span></a>
+    <button class="menu-btn" type="button" aria-label="Open menu">MENU</button>
+    <ul>
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#cad">CAD Studio</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="p-hero">
+  <div class="wrap">
+    <div class="crumb rv"><a href="../index.html#work">Work</a> / Senior Design</div>
+    <h1 class="rv">Lock Point: Modular CNC Workholding</h1>
+    <p class="lede rv">Our machine shop&#x27;s vises can&#x27;t hold big, thin, or oddly shaped parts. I&#x27;m leading a five-person team to fix that with a modular fixture system that swaps between vacuum and mechanical clamping in seconds.</p>
+    <dl class="meta frame rv"><div><dt>Role</dt><dd>Team Lead</dd></div><div><dt>Team</dt><dd>5 mechanical engineers</dd></div><div><dt>Timeline</dt><dd>Aug 2026 – May 2027</dd></div><div><dt>Sponsor</dt><dd>SDSU Machine Shop</dd></div></dl>
+    <div class="p-cover frame rv contain"><img src="../assets/img/lp-pallet-assemblies.webp" alt="Lock Point: Modular CNC Workholding" width="1771" height="652" fetchpriority="high"></div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="p-body">
+    <aside class="toc"><a href="#problem">01 · The problem</a><a href="#role">02 · My role</a><a href="#concepts">03 · Concepts and trade study</a><a href="#analysis">04 · Holding-force analysis</a><a href="#design">05 · Design decisions after the PDR</a><a href="#gallery">06 · Gallery</a></aside>
+    <article class="prose"><div class="block rv"><h2 id="problem"><span class="n">01</span>The problem</h2>
+<p>Students and university projects regularly need to machine long, flat, or irregular parts on the shop's <strong>Haas VF-2YT and VF-4SS</strong> CNC mills. A standard vise can't grip them, so the shop either improvises or turns the work away. Our sponsor, the machine shop supervisor, asked for something light, modular, and fast to set up that can hold those parts firmly without distorting them.</p>
+<div class="callout">Requirements: modular and reconfigurable, quick to install and remove, rigid enough to limit movement, vibration, and distortion, every component under about 50 lb, and everything inside the Haas enclosure. Budget: $1,750.</div></div><div class="block rv"><h2 id="role"><span class="n">02</span>My role</h2>
+<p>As team lead, I own the project's direction and management from end to end. I defined the scope and requirements with our sponsor, built the plan and schedule, set role assignments across the team, and manage the $1,750 material budget. I led the research and design planning that shaped our concepts, drove the technical risk assessment, and led development of the bill of materials, along with the logistics of sourcing material and coordinating shop time.</p>
+<p>I run our weekly team meetings and weekly sponsor reviews, keep the design documentation consistent, and make sure every subsystem decision ties back to the requirements. Teammates own detailed pieces of the analysis, trade studies, testing, and procurement; my job is to integrate that work into one coherent design and keep it on schedule and on budget.</p></div><div class="block rv"><h2 id="concepts"><span class="n">03</span>Concepts and trade study</h2>
+<p>We scored three concepts against weighted criteria. A suction-cup fixture was cheap but couldn't guarantee repeatability. A threaded fixture plate on the T-slots held parts well but was slow to change over. The winner keeps the rigid base of the shop's existing Orange Vise, adds an adapter, and lets vacuum or mechanical pallets swap on and off.</p>
+<table class="data"><thead><tr><th>Concept</th><th>Repeatability 25%</th><th>Holding 25%</th><th>Modularity 20%</th><th>Score / 5</th></tr></thead><tbody>
+<tr><td>A · Suction cups</td><td>2</td><td>2</td><td>3</td><td>2.70</td></tr>
+<tr><td>B · Threaded plate on T-slots</td><td>3</td><td>5</td><td>2</td><td>3.05</td></tr>
+<tr class="win"><td>C · Adapter + swappable pallets</td><td>4</td><td>4</td><td>5</td><td>4.15</td></tr>
+</tbody></table>
+<p>The same approach drove the smaller decisions: an electric vacuum pump over a venturi for steady vacuum, RockLock-style pull studs for pallet locking, low-profile machinable clamps for tool clearance, 6061-T6 aluminum for the plates, and nitrile gaskets because they hold up to cutting oils and coolant.</p></div><div class="block rv"><h2 id="analysis"><span class="n">04</span>Holding-force analysis</h2>
+<div class="kpis">
+ <div class="kpi frame"><div class="v">629<small> lbf</small></div><div class="k">Vacuum table holding force (20 inHg over 128 in², 50% efficiency)</div></div>
+ <div class="kpi frame"><div class="v">~8,000<small> lbf</small></div><div class="k">Pallet retention from four pull studs</div></div>
+ <div class="kpi frame"><div class="v">~6,000<small> lbf</small></div><div class="k">Per low-profile machinable clamp</div></div>
+ <div class="kpi frame"><div class="v">0.001<small> in</small></div><div class="k">Repeatability target</div></div>
+</div>
+<p>The most useful finding was a negative one: vacuum alone is short on side load. That's why the design adds locating pins, stops, and clamps to the vacuum pallet instead of trusting suction to resist cutting forces.</p></div><div class="block rv"><h2 id="design"><span class="n">05</span>Design decisions after the PDR</h2>
+<p>After the review we simplified. Machining our own dovetailed adapter would have eaten budget and shop time, so we chose to buy a precision 6 × 20 × 1 in adapter plate (about $320, rated to 0.01 mm repeatability) and machine only our own hole pattern into it: four through-holes that bolt the vacuum plate down and pin holes sized to match Orange Vise hardware. Prototype fabrication and testing on the Haas mills run through spring 2027, across different part materials, geometries, and spindle speeds.</p></div><div class="block rv"><h2 id="gallery"><span class="n">06</span>Gallery</h2><div class="gallery"><figure class="frame w2 fit" style="--ar:900/900"><img src="../assets/img/lockpoint-logo.webp" alt="The team&#x27;s Lock Point mark." width="900" height="900" loading="lazy" decoding="async"><figcaption>The team&#x27;s Lock Point mark.</figcaption></figure><figure class="frame " style="--ar:4/3"><img src="../assets/img/lp-drawing-assembly.webp" alt="Assembly drawing." width="1800" height="1153" loading="lazy" decoding="async"><figcaption>Assembly drawing.</figcaption></figure><figure class="frame " style="--ar:4/3"><img src="../assets/img/lp-drawing-vacuum-plate.webp" alt="Vacuum plate drawing." width="1800" height="1151" loading="lazy" decoding="async"><figcaption>Vacuum plate drawing.</figcaption></figure><figure class="frame " style="--ar:4/3"><img src="../assets/img/lp-drawing-fixture-plate.webp" alt="Fixture plate drawing." width="1800" height="1153" loading="lazy" decoding="async"><figcaption>Fixture plate drawing.</figcaption></figure><figure class="frame " style="--ar:4/3"><img src="../assets/img/lp-drawing-adapter.webp" alt="Adapter drawing." width="1800" height="1153" loading="lazy" decoding="async"><figcaption>Adapter drawing.</figcaption></figure><figure class="frame w2 fit" style="--ar:1518/1532"><img src="../assets/img/lp-exploded.webp" alt="Exploded view of the plate stack." width="1518" height="1532" loading="lazy" decoding="async"><figcaption>Exploded view of the plate stack.</figcaption></figure><figure class="frame w4 fit" style="--ar:1556/744"><img src="../assets/img/lp-concept-a.webp" alt="Concept A, the suction-cup fixture we scored out." width="1556" height="744" loading="lazy" decoding="async"><figcaption>Concept A, the suction-cup fixture we scored out.</figcaption></figure></div><p class="note">Click any image to enlarge. Technical drawings are shown in an inverted blueprint style.</p></div></article>
+  </div>
+  <div class="next">
+    <a href="manufacturing-labs.html">← Hands-On Manufacturing</a>
+    <a href="ewb-water.html">Clean Water for Mbaala →</a>
+  </div>
+</main>
+<footer>
+  <div class="wrap">© 2026 Thomas Bonar · Mechanical Engineering · Built by hand, hosted on GitHub Pages</div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

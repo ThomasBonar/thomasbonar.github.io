@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electric Fuel Pump Shaft Design · Thomas Bonar</title>
+<meta name="description" content="Sized the main rotary shaft for a 30,000 rpm electric fuel pump that feeds ethanol to a liquid rocket engine.">
+<meta name="author" content="Thomas Bonar">
+<meta property="og:title" content="Electric Fuel Pump Shaft Design · Thomas Bonar">
+<meta property="og:description" content="Sized the main rotary shaft for a 30,000 rpm electric fuel pump that feeds ethanol to a liquid rocket engine.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thomasbonar.github.io/projects/rocket-pump.html">
+<meta property="og:image" content="https://thomasbonar.github.io/assets/img/og-card.png">
+<meta name="theme-color" content="#04070c">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="mark">TB</span><span>Thomas Bonar</span></a>
+    <button class="menu-btn" type="button" aria-label="Open menu">MENU</button>
+    <ul>
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#cad">CAD Studio</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="p-hero">
+  <div class="wrap">
+    <div class="crumb rv"><a href="../index.html#work">Work</a> / SDSU Rocket Project</div>
+    <h1 class="rv">Electric Fuel Pump Shaft Design</h1>
+    <p class="lede rv">The propulsion team set out to replace pressure-fed fuel delivery with a motor-driven centrifugal pump, the way real launch vehicles do it. My piece was the shaft that carries all of that power.</p>
+    <dl class="meta frame rv"><div><dt>Role</dt><dd>Propulsion Team Member</dd></div><div><dt>Team</dt><dd>Propulsion subteam</dd></div><div><dt>Timeline</dt><dd>Dec 2025 – May 2026</dd></div><div><dt>Tools</dt><dd>MATLAB, McMaster-Carr</dd></div></dl>
+    <div class="p-cover frame rv contain"><img src="../assets/img/rocket-pump-cad.webp" alt="Electric Fuel Pump Shaft Design" width="1306" height="668" fetchpriority="high"></div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="p-body">
+    <aside class="toc"><a href="#problem">01 · The pump</a><a href="#role">02 · My part: the main shaft</a><a href="#intro">03 · Thrust chamber sizing</a><a href="#gallery">04 · Gallery</a></aside>
+    <article class="prose"><div class="block rv"><h2 id="problem"><span class="n">01</span>The pump</h2>
+<div class="kpis">
+ <div class="kpi frame"><div class="v">1<small> kg/s</small></div><div class="k">Ethanol mass flow</div></div>
+ <div class="kpi frame"><div class="v">50→500<small> psi</small></div><div class="k">Suction to discharge pressure</div></div>
+ <div class="kpi frame"><div class="v">30,000<small> rpm</small></div><div class="k">Design speed</div></div>
+ <div class="kpi frame"><div class="v">8.5<small> kW</small></div><div class="k">Estimated motor power demand (~37% overall efficiency)</div></div>
+</div>
+<p>Running fast keeps the pump small and efficient, but it puts real torque through a small-diameter shaft. The team's Preliminary Design Review covered pump sizing and NPSH, an unshrouded six-vane impeller, the volute, sealing options, a brushless motor, and a test plan with pressure transducers, a flow meter, and thermocouples.</p></div><div class="block rv"><h2 id="role"><span class="n">02</span>My part: the main shaft</h2>
+<p>I owned the main rotary shaft calculations. Starting from the motor's 11.4 hp at 30,000 rpm, I worked out shaft torque, then the torsional shear stress at the threaded minor diameter (the weakest section), then a factor of safety for each candidate material, scripting the math in MATLAB so every option could be compared the same way.</p>
+<p>I compared five off-the-shelf McMaster-Carr shafts on yield strength, thread size, cost, and safety factor:</p>
+<table class="data"><thead><tr><th>Shaft</th><th>Diameter</th><th>Material</th><th>Yield</th><th>Cost</th></tr></thead><tbody>
+<tr><td>Threaded rotary</td><td>½ in (⅜-16)</td><td>1117 carbon steel</td><td>58 kpsi</td><td>$28.65</td></tr>
+<tr><td>Threaded rotary</td><td>¾ in (½-13)</td><td>1117 carbon steel</td><td>58 kpsi</td><td>$37.33</td></tr>
+<tr><td>Threaded rotary</td><td>1 in (⅝-11)</td><td>1117 carbon steel</td><td>58 kpsi</td><td>$53.95</td></tr>
+<tr><td>Rotary</td><td>¾ in</td><td>1566 carbon steel</td><td>87 kpsi</td><td>$15.39</td></tr>
+<tr class="win"><td>Rotary</td><td>¾ in</td><td>1045 carbon steel</td><td>65.3 kpsi</td><td>$11.26</td></tr>
+</tbody></table>
+<p>The team's design review carried 1045 carbon steel forward for the shaft, with a keyless tapered fit to the 6061-T6 aluminum impeller.</p></div><div class="block rv"><h2 id="intro"><span class="n">03</span>Thrust chamber sizing</h2>
+<p>Joining propulsion meant finishing an admission project first: research on rocket engine fundamentals, then sizing a thrust chamber from scratch. I worked the problem by hand first, checked it in MATLAB, and modeled the resulting chamber and nozzle in SolidWorks.</p>
+<table class="data"><thead><tr><th>Input</th><th>Value</th></tr></thead><tbody>
+<tr><td>Propellants</td><td>LOX / RP-1</td></tr>
+<tr><td>Mixture ratio (O/F)</td><td>2.24</td></tr>
+<tr><td>Expansion ratio (Ae/At)</td><td>5.8</td></tr>
+<tr><td>Total mass flow rate</td><td>2.9424 lb/s</td></tr>
+<tr><td>Chamber pressure</td><td>650 psi</td></tr>
+<tr><td>Chamber temperature</td><td>6,602.7 °R</td></tr>
+<tr><td>Assumptions</td><td>γ = 1.2, exit pressure = atmospheric</td></tr>
+</tbody></table>
+<p>From there I found the throat conditions from the choked-flow relations (P<sub>t</sub> ≈ 0.564 P<sub>c</sub>, T<sub>t</sub> ≈ 0.909 T<sub>c</sub>), sized the throat area from the mass flow, solved for the exit Mach number that expands the flow to atmospheric pressure, and sized the exit from the isentropic area ratio.</p>
+<div class="kpis">
+ <div class="kpi frame"><div class="v">0.201<small> ft</small></div><div class="k">Throat diameter (≈2.41 in)</div></div>
+ <div class="kpi frame"><div class="v">2.47</div><div class="k">Exit Mach number</div></div>
+ <div class="kpi frame"><div class="v">0.510<small> ft</small></div><div class="k">Exit diameter (≈6.12 in)</div></div>
+</div></div><div class="block rv"><h2 id="gallery"><span class="n">04</span>Gallery</h2><div class="gallery"><figure class="frame " style="--ar:4/3"><img src="../assets/img/rocket-impeller.webp" alt="Impeller seated in the volute." width="1257" height="639" loading="lazy" decoding="async"><figcaption>Impeller seated in the volute.</figcaption></figure><figure class="frame " style="--ar:4/3"><img src="../assets/img/rocket-volute.webp" alt="Volute and impeller detail." width="1309" height="599" loading="lazy" decoding="async"><figcaption>Volute and impeller detail.</figcaption></figure><figure class="frame w2" style="--ar:4/3"><img src="../assets/img/rocket-hand-calcs.webp" alt="My hand calculations for the thrust chamber sizing project." width="1600" height="1000" loading="lazy" decoding="async"><figcaption>My hand calculations for the thrust chamber sizing project.</figcaption></figure><figure class="frame w4 fit" style="--ar:4/3"><img src="../assets/img/rocket-matlab-sizing.webp" alt="The same sizing checked in MATLAB." width="1600" height="1000" loading="lazy" decoding="async"><figcaption>The same sizing checked in MATLAB.</figcaption></figure><figure class="frame w6 fit" style="--ar:4/3"><img src="../assets/img/rocket-chamber-drawing.webp" alt="Thrust chamber and nozzle drawing I modeled in SolidWorks." width="1600" height="1000" loading="lazy" decoding="async"><figcaption>Thrust chamber and nozzle drawing I modeled in SolidWorks.</figcaption></figure><figure class="frame w6 fit" style="--ar:1403/1600"><img src="../assets/img/rocket-pump-curves.webp" alt="Hydraulic efficiency versus specific speed and flow, used to size the pump." width="1403" height="1600" loading="lazy" decoding="async"><figcaption>Hydraulic efficiency versus specific speed and flow, used to size the pump.</figcaption></figure></div><p class="note">Click any image to enlarge. Technical drawings are shown in an inverted blueprint style.</p></div></article>
+  </div>
+  <div class="next">
+    <a href="ewb-water.html">← Clean Water for Mbaala</a>
+    <a href="gearbox.html">Aircraft Accessory Gearbox →</a>
+  </div>
+</main>
+<footer>
+  <div class="wrap">© 2026 Thomas Bonar · Mechanical Engineering · Built by hand, hosted on GitHub Pages</div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

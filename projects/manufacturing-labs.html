@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hands-On Manufacturing · Thomas Bonar</title>
+<meta name="description" content="CNC milling and turning on Haas machines, a 3D-printing tensile study, and tearing down and rebuilding a four-stroke engine.">
+<meta name="author" content="Thomas Bonar">
+<meta property="og:title" content="Hands-On Manufacturing · Thomas Bonar">
+<meta property="og:description" content="CNC milling and turning on Haas machines, a 3D-printing tensile study, and tearing down and rebuilding a four-stroke engine.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://thomasbonar.github.io/projects/manufacturing-labs.html">
+<meta property="og:image" content="https://thomasbonar.github.io/assets/img/og-card.png">
+<meta name="theme-color" content="#04070c">
+<link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/space-grotesk-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="../index.html"><span class="mark">TB</span><span>Thomas Bonar</span></a>
+    <button class="menu-btn" type="button" aria-label="Open menu">MENU</button>
+    <ul>
+      <li><a href="../index.html#work">Work</a></li>
+      <li><a href="../index.html#experience">Experience</a></li>
+      <li><a href="../index.html#cad">CAD Studio</a></li>
+      <li><a href="../index.html#about">About</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+<header class="p-hero">
+  <div class="wrap">
+    <div class="crumb rv"><a href="../index.html#work">Work</a> / ME 340 · Manufacturing</div>
+    <h1 class="rv">Hands-On Manufacturing</h1>
+    <p class="lede rv">I like knowing how the parts I draw actually get made. These labs put me on the machines: setting tool offsets, cutting threads, breaking printed parts, and taking an engine apart to judge its design for manufacturing.</p>
+    <dl class="meta frame rv"><div><dt>Course</dt><dd>ME 340, Manufacturing</dd></div><div><dt>Team</dt><dd>Mill and lathe solo; printing and engine in teams</dd></div><div><dt>Timeline</dt><dd>Spring 2026</dd></div><div><dt>Machines</dt><dd>Haas mill and lathe, Bambu P1P, Instron</dd></div></dl>
+    <div class="p-cover frame rv"><img src="../assets/img/mfg-mill-part.webp" alt="Hands-On Manufacturing" width="1200" height="1600" fetchpriority="high"></div>
+  </div>
+</header>
+<main class="wrap">
+  <div class="p-body">
+    <aside class="toc"><a href="#mill">01 · CNC mill</a><a href="#lathe">02 · CNC lathe</a><a href="#printing">03 · 3D printing tensile study</a><a href="#engine">04 · Engine teardown (DFM/DFA)</a><a href="#gallery">05 · Gallery</a><a href="#docs">06 · Read the work</a></aside>
+    <article class="prose"><div class="block rv"><h2 id="mill"><span class="n">01</span>CNC mill</h2>
+<p>I loaded four tools (end mill, drill, spot drill, and ball end mill), set work and tool offsets with an edge finder, and ran the program to cut a 3 × 3 in metal part. Asked how I'd make 100 of them, I'd cut several parts from one larger plate to avoid re-homing for each piece, which is where most of the time went.</p></div><div class="block rv"><h2 id="lathe"><span class="n">02</span>CNC lathe</h2>
+<p>I turned an aluminum ring with 1-12 UNF external threads from 1 in bar stock. The width and outside dimension came out on target (0.50 in wide, 0.48 in outside radius). The bore measured 0.31 in instead of 0.35 in, because a lip formed during cutting, and the edges needed deburring. For production, I'd thread and bore the whole bar first and then part off, and add a catch basin so finished parts don't fall into the machine.</p></div><div class="block rv"><h2 id="printing"><span class="n">03</span>3D printing tensile study</h2>
+<p>Our team printed six dogbone specimens on a Bambu P1P while varying layer height and infill, then pulled them to failure on an Instron. The specimens failed between 0.50 and 0.60 kN (about 26 to 31 MPa ultimate tensile strength), and the results showed how print settings trade strength against print time.</p></div><div class="block rv"><h2 id="engine"><span class="n">04</span>Engine teardown (DFM/DFA)</h2>
+<p>Our team disassembled a four-stroke engine, studied how each part was made and assembled, and rebuilt it with timing marks aligned and valves clearing the piston. Bagging each subassembly's bolts separately made the rebuild much faster. The throttle linkage was the hardest part to refit, which became one of our design-for-assembly suggestions.</p></div><div class="block rv"><h2 id="gallery"><span class="n">05</span>Gallery</h2><div class="gallery"><figure class="frame " style="--ar:4/3"><img src="../assets/img/mfg-mill-cutting.webp" alt="Haas mill cutting with coolant." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Haas mill cutting with coolant.</figcaption></figure><figure class="frame w4" style="--ar:4/3"><img src="../assets/img/mfg-haas-mill.webp" alt="The Haas VF-series mill." width="1600" height="1200" loading="lazy" decoding="async"><figcaption>The Haas VF-series mill.</figcaption></figure><figure class="frame w2" style="--ar:4/3"><img src="../assets/img/mfg-mill-tools.webp" alt="Tool holders staged for the job." width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Tool holders staged for the job.</figcaption></figure><figure class="frame w2" style="--ar:4/3"><img src="../assets/img/mfg-lathe-ring.webp" alt="Threaded aluminum ring from the CNC lathe." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Threaded aluminum ring from the CNC lathe.</figcaption></figure><figure class="frame w2" style="--ar:4/3"><img src="../assets/img/mfg-haas-lathe.webp" alt="Haas CNC lathe." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Haas CNC lathe.</figcaption></figure><figure class="frame w2" style="--ar:4/3"><img src="../assets/img/mfg-lathe-cutting.webp" alt="Turning the threads." width="1600" height="1200" loading="lazy" decoding="async"><figcaption>Turning the threads.</figcaption></figure><figure class="frame w2" style="--ar:4/3"><img src="../assets/img/mfg-3dp-specimens.webp" alt="Printed tensile specimens after testing." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Printed tensile specimens after testing.</figcaption></figure><figure class="frame w2" style="--ar:4/3"><img src="../assets/img/mfg-3dp-printer.webp" alt="Printing a specimen." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Printing a specimen.</figcaption></figure><figure class="frame w2" style="--ar:4/3"><img src="../assets/img/mfg-3dp-instron.webp" alt="Instron tensile test." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Instron tensile test.</figcaption></figure><figure class="frame w2" style="--ar:4/3"><img src="../assets/img/mfg-engine-internals.webp" alt="Engine internals during teardown." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Engine internals during teardown.</figcaption></figure><figure class="frame w2" style="--ar:4/3"><img src="../assets/img/mfg-engine-teardown.webp" alt="Engine teardown bench." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Engine teardown bench.</figcaption></figure><figure class="frame w2" style="--ar:4/3"><img src="../assets/img/mfg-engine-parts.webp" alt="Disassembled components laid out for inspection." width="1200" height="1600" loading="lazy" decoding="async"><figcaption>Disassembled components laid out for inspection.</figcaption></figure></div><p class="note">Click any image to enlarge. Technical drawings are shown in an inverted blueprint style.</p></div><div class="block rv"><h2 id="docs"><span class="n">06</span>Read the work</h2><div class="docs"><a class="doc frame" href="../assets/docs/cnc-mill-report.pdf" target="_blank" rel="noopener"><span class="ico">PDF</span><span><span>Haas CNC Mill Lab Report</span><br><span class="s">9 pages · solo · opens in your browser</span></span></a><a class="doc frame" href="../assets/docs/cnc-lathe-report.pdf" target="_blank" rel="noopener"><span class="ico">PDF</span><span><span>Haas CNC Lathe Lab Report</span><br><span class="s">6 pages · solo · opens in your browser</span></span></a></div></div></article>
+  </div>
+  <div class="next">
+    <a href="sonic-car.html">← Autonomous Sonic Car</a>
+    <a href="lock-point.html">Lock Point →</a>
+  </div>
+</main>
+<footer>
+  <div class="wrap">© 2026 Thomas Bonar · Mechanical Engineering · Built by hand, hosted on GitHub Pages</div>
+</footer>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
